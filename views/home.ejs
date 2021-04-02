@@ -1,0 +1,24 @@
+<%- include("partials/header") -%>
+
+    <h1>Hello</h1>
+    <p> <%= paragraph %> </p>
+    <%# console.log(kindpost); %>
+
+
+
+  <%  kindpost.forEach(function(letter){ %>
+
+     <h1><%= letter.title %></h1>
+     <p><%= letter.post.substring(0,100) + " ..." %>
+       <a href="/post/<%=letter.title%>">Read more</a>
+     </p>
+
+  <%  }); %>
+
+
+<%- include("partials/footer") -%>
+
+<!-- for(var i = 0; i<kindpost.length; i++ ){ %>
+ console.log(kindpost[i].title); %>
+ }; %>
+-->
